@@ -25,5 +25,12 @@
             "config:base",
             ":automergePatch"
         ]
+    },
+    "prettier": {
+        "singleQuote": true,
+        "tabWidth": 4,
+        "trailingComma": "all",
+        "proseWrap": "always",
+        "arrowParens": "avoid"
     }
 }
