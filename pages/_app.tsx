@@ -4,7 +4,7 @@ import { AppProps } from 'next/app';
 import { ThemeProvider, Button } from '@material-ui/core';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import theme from 'lib/theme';
-import { SnackbarProvider, ProviderContext } from 'notistack';
+import { SnackbarProvider } from 'notistack';
 
 export default function MyApp(props: AppProps) {
     const { Component, pageProps } = props;
@@ -15,7 +15,7 @@ export default function MyApp(props: AppProps) {
             jssStyles.parentElement!.removeChild(jssStyles);
         }
     }, []);
-    const notistackRef = React.createRef<ProviderContext>();
+    const notistackRef = React.createRef<SnackbarProvider>();
 
     return (
         <React.Fragment>
