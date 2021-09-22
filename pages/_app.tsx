@@ -1,24 +1,26 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import Head from 'next/head';
 import { AppProps } from 'next/app';
-import { ThemeProvider, Button } from '@material-ui/core';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import theme from 'lib/theme';
+import { ThemeProvider, Button, CssBaseline } from '@mui/material';
+import { CacheProvider, EmotionCache } from '@emotion/react';
+import theme, { createEmotionCache } from 'lib/theme';
 import { SnackbarProvider } from 'notistack';
 
-export default function MyApp(props: AppProps) {
-    const { Component, pageProps } = props;
+const clientSideEmotionCache = createEmotionCache();
 
-    useEffect(() => {
-        const jssStyles = document.querySelector('#jss-server-side');
-        if (jssStyles) {
-            jssStyles.parentElement!.removeChild(jssStyles);
-        }
-    }, []);
+interface MyAppProps extends AppProps {
+    emotionCache?: EmotionCache;
+}
+
+export default function MyApp(props: MyAppProps) {
+    const {
+        Component,
+        emotionCache = clientSideEmotionCache,
+        pageProps,
+    } = props;
     const notistackRef = React.createRef<SnackbarProvider>();
-
     return (
-        <React.Fragment>
+        <CacheProvider value={emotionCache}>
             <Head>
                 <title>GP Template Site</title>
                 <meta
@@ -43,6 +45,6 @@ export default function MyApp(props: AppProps) {
                     <Component {...pageProps} />
                 </SnackbarProvider>
             </ThemeProvider>
-        </React.Fragment>
+        </CacheProvider>
     );
 }

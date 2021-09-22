@@ -1,5 +1,10 @@
-import { createMuiTheme } from '@material-ui/core/styles';
+import { createTheme } from '@mui/material/styles';
+import createCache from '@emotion/cache';
 
-const theme = createMuiTheme({});
+export function createEmotionCache() {
+    return createCache({ key: 'css' });
+}
+
+const theme = createTheme({});
 
 export default theme;
