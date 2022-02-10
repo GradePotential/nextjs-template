@@ -4,18 +4,15 @@ import Message from '@mui/icons-material/Message';
 import Download from '@mui/icons-material/Download';
 import { useSnackbar } from 'notistack';
 import { LoadingButton } from '@mui/lab';
-import { useMutation, useQuery } from 'lib/trpc';
+import { trpc } from 'lib/trpc';
 
 const Page = () => {
     const { enqueueSnackbar } = useSnackbar();
-    const hello = useQuery(['hello', null], {
-        refetchOnWindowFocus: false,
-    });
-    const log = useMutation('log');
+    const hello = trpc.useQuery(['hello']);
     return (
         <Container maxWidth="lg">
             <Box mt={3} textAlign="center">
-                {hello.isSuccess ? hello.data.greeting : '...'} (As of{' '}
+                {hello.isSuccess ? hello.data : '...'} (As of{' '}
                 {new Date(hello.dataUpdatedAt).toLocaleTimeString()})
             </Box>
             <Box mt={3} textAlign="center">
@@ -43,15 +40,6 @@ const Page = () => {
                 >
                     Refetch
                 </LoadingButton>
-            </Box>
-            <Box mt={3} textAlign="center">
-                <Button
-                    color="success"
-                    variant="contained"
-                    onClick={async () => log.mutate('this is what to log')}
-                >
-                    Log
-                </Button>
             </Box>
         </Container>
     );

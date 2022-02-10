@@ -6,7 +6,7 @@ import { CacheProvider, EmotionCache } from '@emotion/react';
 import theme, { createEmotionCache } from 'lib/theme';
 import { SnackbarProvider } from 'notistack';
 import { withTRPC } from '@trpc/next';
-import { AppRouter } from './api/trpc/[trpc]';
+import type { AppRouter } from 'server/routers/app';
 
 const clientSideEmotionCache = createEmotionCache();
 
