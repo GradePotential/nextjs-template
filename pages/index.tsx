@@ -5,7 +5,7 @@ const Page = () => {
     const hello = trpc.useQuery(['hello']);
     return (
         <div className="mt-4 text-center text-xl font-bold capitalize">
-            hello {hello.data ?? 'Unknown'}
+            hello {hello.data?.name ?? 'Unknown'}
         </div>
     );
 };

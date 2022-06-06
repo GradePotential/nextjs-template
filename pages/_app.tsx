@@ -3,6 +3,7 @@ import Head from 'next/head';
 import { AppProps } from 'next/app';
 import { withTRPC } from '@trpc/next';
 import type { AppRouter } from 'server/routers/app';
+import superjson from 'superjson';
 import 'lib/global.css';
 
 function MyApp(props: AppProps) {
@@ -26,7 +27,7 @@ export default withTRPC<AppRouter>({
             ? `https://${process.env.VERCEL_URL}/api/trpc`
             : 'http://localhost:3000/api/trpc';
 
-        return { url };
+        return { url, transformer: superjson };
     },
 
     ssr: false,
