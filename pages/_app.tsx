@@ -1,78 +1,33 @@
 import React from 'react';
 import Head from 'next/head';
 import { AppProps } from 'next/app';
-import { ThemeProvider, Button, CssBaseline } from '@mui/material';
-import { CacheProvider, EmotionCache } from '@emotion/react';
-import theme, { createEmotionCache } from 'lib/theme';
-import { SnackbarProvider } from 'notistack';
 import { withTRPC } from '@trpc/next';
 import type { AppRouter } from 'server/routers/app';
+import 'lib/global.css';
 
-const clientSideEmotionCache = createEmotionCache();
-
-interface MyAppProps extends AppProps {
-    emotionCache?: EmotionCache;
-}
-
-function MyApp(props: MyAppProps) {
-    const {
-        Component,
-        emotionCache = clientSideEmotionCache,
-        pageProps,
-    } = props;
-    const notistackRef = React.createRef<SnackbarProvider>();
+function MyApp(props: AppProps) {
+    const { Component, pageProps } = props;
     return (
-        <CacheProvider value={emotionCache}>
+        <>
             <Head>
                 <title>GP Template Site</title>
-                <meta
-                    name="viewport"
-                    content="minimum-scale=1, initial-scale=1, width=device-width"
-                />
             </Head>
-            <ThemeProvider theme={theme}>
-                <SnackbarProvider
-                    ref={notistackRef}
-                    action={key => (
-                        <Button
-                            onClick={() =>
-                                notistackRef.current?.closeSnackbar(key)
-                            }
-                        >
-                            Dismiss
-                        </Button>
-                    )}
-                >
-                    <CssBaseline />
-                    <Component {...pageProps} />
-                </SnackbarProvider>
-            </ThemeProvider>
-        </CacheProvider>
+
+            <Component {...pageProps} />
+        </>
     );
 }
 
 export default withTRPC<AppRouter>({
     config() {
-        /**
-         * If you want to use SSR, you need to use the server's full URL
-         * @link https://trpc.io/docs/ssr
-         */
         const url = process.browser
             ? '/api/trpc'
             : process.env.VERCEL_URL
             ? `https://${process.env.VERCEL_URL}/api/trpc`
             : 'http://localhost:3000/api/trpc';
 
-        return {
-            url,
-            /**
-             * @link https://react-query.tanstack.com/reference/QueryClient
-             */
-            // queryClientConfig: { defaultOptions: { queries: { staleTime: 60 } } },
-        };
+        return { url };
     },
-    /**
-     * @link https://trpc.io/docs/ssr
-     */
+
     ssr: false,
 })(MyApp);
