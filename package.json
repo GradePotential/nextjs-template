@@ -11,7 +11,7 @@
         "postinstall": "prisma generate"
     },
     "dependencies": {
-        "@prisma/client": "^4.0.0",
+        "@prisma/client": "^5.0.0",
         "@trpc/client": "^9.25.3",
         "@trpc/next": "^9.25.3",
         "@trpc/react": "^9.25.3",
@@ -95,7 +95,7 @@
         "eslint-config-next": "13.3.4",
         "postcss": "8.4.26",
         "prettier-plugin-tailwindcss": "0.4.1",
-        "prisma": "4.16.2",
+        "prisma": "5.1.1",
         "tailwindcss": "3.3.3"
     }
 }
