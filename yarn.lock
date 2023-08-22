@@ -30,11 +30,11 @@
     regenerator-runtime "^0.13.4"
 
 "@babel/runtime@^7.9.0":
-  version "7.15.4"
-  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.15.4.tgz#fd17d16bfdf878e6dd02d19753a39fa8a8d9c84a"
-  integrity sha512-99catp6bHCaxr4sJ/DbTGgHS4+Rs2RVd2g7iOap6SLGPDknRK9ztKNsE/Fg6QhSeh1FGE5f6gHGQmvvn3I3xhw==
+  version "7.22.10"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.22.10.tgz#ae3e9631fd947cb7e3610d3e9d8fef5f76696682"
+  integrity sha512-21t/fkKLMZI4pqP2wlmsQAWnYW1PDyKyyUV4vCi+B25ydmdaYTKXPwCj0BzSUnZf4seIiYvSA3jcZ3gdsMFkLQ==
   dependencies:
-    regenerator-runtime "^0.13.4"
+    regenerator-runtime "^0.14.0"
 
 "@eslint-community/eslint-utils@^4.2.0":
   version "4.4.0"
@@ -257,41 +257,41 @@
     use-sync-external-store "^1.2.0"
 
 "@trpc/client@^9.25.3":
-  version "9.25.3"
-  resolved "https://registry.yarnpkg.com/@trpc/client/-/client-9.25.3.tgz#7a0d1a28b98c976479004c34019db7ac17f274e7"
-  integrity sha512-4R+IK3cCDjoOTwHDyu+uN0bF3mYQI34i6aDNU3D/dJJxcA8PX5f8yb++nnR4RT6oTnu3yiR3PFC4KslvBtyi9w==
+  version "9.27.4"
+  resolved "https://registry.yarnpkg.com/@trpc/client/-/client-9.27.4.tgz#01942784af5628e615bd6dd6094a16c5f7a7d457"
+  integrity sha512-NyS3J333xy8PJWGTSKO0egvj3x/s4SaSPx7XDWHf/i51W/i5Fla+sNxYpv+4z+SwE2xyJKszN2EZbvKIW2X/wA==
   dependencies:
     "@babel/runtime" "^7.9.0"
 
 "@trpc/next@^9.25.3":
-  version "9.25.3"
-  resolved "https://registry.yarnpkg.com/@trpc/next/-/next-9.25.3.tgz#a8703f328074f560574b683483456f3156634e3b"
-  integrity sha512-eAhPIinDTUiEgiPjChNIcqaPgwn+rJ8HX374fwff/tZXg5OVr3dA7rur2nYyQUWO8LvdiLfUAbTxgtoEB8SPKw==
+  version "9.27.4"
+  resolved "https://registry.yarnpkg.com/@trpc/next/-/next-9.27.4.tgz#55c0b5997421855a42333c5f4e93463e9c5bf522"
+  integrity sha512-QY7eT37hIjHmtqOSEfx4IvZXOGHozIQ6B0MQ3+olmpMpTrygcYi4mFiurPV8Txh1iLa5mgBoJ1ZepLaSc0qzkg==
   dependencies:
     "@babel/runtime" "^7.9.0"
     react-ssr-prepass "^1.5.0"
 
 "@trpc/react@^9.25.3":
-  version "9.25.3"
-  resolved "https://registry.yarnpkg.com/@trpc/react/-/react-9.25.3.tgz#4da4ba8e3363199d9b310481aac279bcdf187adc"
-  integrity sha512-/StrJS7hKPPn88YaXX+qRU50MeLZxBmPC5BLVyhRtwmbzK25Q0MTzBgQLrjoCpJ/HgXYZEbB5ddiw8f+/WnqIA==
+  version "9.27.4"
+  resolved "https://registry.yarnpkg.com/@trpc/react/-/react-9.27.4.tgz#0320e0cbd416506959ddc65a10758fc41d70fb65"
+  integrity sha512-bP74Tf6vWcMoWYiTAvbWrieV9cFQiKUDKRoRj0+VeGJbxdbhdJyUzv4zos0T4SiSKuhgoEm9bP4jWU2NhNhpIA==
   dependencies:
     "@babel/runtime" "^7.9.0"
 
 "@trpc/server@^9.25.3":
-  version "9.25.3"
-  resolved "https://registry.yarnpkg.com/@trpc/server/-/server-9.25.3.tgz#a11ef35f872216a84e2c9c76c56d7e95e703c477"
-  integrity sha512-1LEURCmSGpxx8/0ZtzMpd0hiSB4xGNKJ9DKq6sbPk+bzdACjH9Ujdwca4P6ylxa8HdMel/effwjlCG0Tfx06Lg==
+  version "9.27.4"
+  resolved "https://registry.yarnpkg.com/@trpc/server/-/server-9.27.4.tgz#6a3d8df1168a46a2b3e6566ba2c48b2aa2f532c1"
+  integrity sha512-yw0omUrxGp8+gEAuieZFeXB4bCqFvmyCDL3GOBv+Q6+cK0m5824ViHZKPgK5DYG1ijN/lbi1hP3UVKywPN7rbQ==
 
 "@types/json5@^0.0.29":
   version "0.0.29"
   resolved "https://registry.yarnpkg.com/@types/json5/-/json5-0.0.29.tgz#ee28707ae94e11d2b827bcbe5270bcea7f3e71ee"
-  integrity sha1-7ihweulOEdK4J7y+UnC86n8+ce4=
+  integrity sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==
 
 "@types/node@^18.0.0":
-  version "18.15.11"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-18.15.11.tgz#b3b790f09cb1696cffcec605de025b088fa4225f"
-  integrity sha512-E5Kwq2n4SbMzQOn6wnmBjuK9ouqlURrcZDVfbo9ftDDTFt3nk7ZKK4GMOzoYgnpQJKcxwQw+lGaBvvlMo0qN/Q==
+  version "18.17.7"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-18.17.7.tgz#8be4a95467c4f2a94cae65f30ee1cf98760525cb"
+  integrity sha512-WJj/p/cIg6zUsxv1n2leZHpvn8hr9TYuLQxAZxZcK/7+5t5ukmJGelOLGOy3L1MLhAO/sapTJGd1V7kvoIuzUg==
 
 "@types/prop-types@*":
   version "15.7.5"
@@ -299,9 +299,9 @@
   integrity sha512-JCB8C6SnDoQf0cNycqd/35A7MjcnK+ZTqE7judS6o7utxUCg6imJg3QK2qzHKszlTjcj2cn+NwMB2i96ubpj7w==
 
 "@types/react@^18.0.14":
-  version "18.0.33"
-  resolved "https://registry.yarnpkg.com/@types/react/-/react-18.0.33.tgz#a1575160cb4376787c2f5fe0312302f824baa61e"
-  integrity sha512-sHxzVxeanvQyQ1lr8NSHaj0kDzcNiGpILEVt69g9S31/7PfMvNCKLKcsHw4lYKjs3cGNJjXSP4mYzX43QlnjNA==
+  version "18.2.20"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-18.2.20.tgz#1605557a83df5c8a2cc4eeb743b3dfc0eb6aaeb2"
+  integrity sha512-WKNtmsLWJM/3D5mG4U84cysVY31ivmyw85dE84fOCk5Hx78wezB/XEjVPWl2JTZ5FkEeaTJf+VgUAUn3PE7Isw==
   dependencies:
     "@types/prop-types" "*"
     "@types/scheduler" "*"
@@ -2272,6 +2272,11 @@ regenerator-runtime@^0.13.4:
   version "0.13.11"
   resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.13.11.tgz#f6dca3e7ceec20590d07ada785636a90cdca17f9"
   integrity sha512-kY1AZVr2Ra+t+piVaJ4gxaFaReZVH40AKNo7UCX6W+dEwBo/2oZJzqfuN1qLq1oL45o56cPaTXELwrTh8Fpggg==
+
+regenerator-runtime@^0.14.0:
+  version "0.14.0"
+  resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.14.0.tgz#5e19d68eb12d486f797e15a3c6a918f7cec5eb45"
+  integrity sha512-srw17NI0TUWHuGa5CFGGmhfNIeja30WMBfbslPNhf6JrqQlLN5gcrvig1oqPxiVaXb0oW0XRKtH6Nngs5lKCIA==
 
 regexp.prototype.flags@^1.4.3, regexp.prototype.flags@^1.5.0:
   version "1.5.0"
